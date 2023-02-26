@@ -62,29 +62,29 @@ const Tickets = () => {
         <tbody className=' h-[6rem] '>
           <tr className='hover:bg-[#F7F8FC] hover:cursor-pointer' >
             <th class="  whitespace-nowrap px-6 w-fit">
-              <div className='flex items-center space-x-5'>
+              <div className='flex items-center  text-sm space-x-3  lg:space-x-5'>
                   <img className='h-10' src='./images/man.png' alt=''/>
 
-                  <div className='flex flex-col items-center'> 
-                    <h1> Header for profile </h1>
+                  <div className='flex text-sm flex-col items-center'> 
+                    <h1 className='text-sm'> Header for profile </h1>
                     <p className='font-normal text-[#C5C7CD]'> Updated 1 day ago </p>
                   </div>
               </div>
             </th>
 
-            <td class="whitespace-nowrap px-6 sm:px-0">
+            <td class="whitespace-nowrap  text-sm px-6 sm:px-0">
               <div> 
                 <h1 className='font-semibold'> Tom Cruise</h1>
                 <p className='text-[#C5C7CD]'> on 24.05.2019 </p>
               </div>
             </td>
-            <td class="whitespace-nowrap px-6 sm:px-0">
+            <td class="whitespace-nowrap text-sm px-6 sm:px-0">
               <div> 
-                <h1 className='font-semibold  flex-wrap'> May 26, 2019</h1>
+                <h1 className='font-semibold text-sm flex-wrap'> May 26, 2019</h1>
                 <p className='text-[#C5C7CD]'> 6:30 PM </p>
               </div>
             </td>
-            <td class="whitespace-nowrap px-6 sm:px-0">
+            <td class="whitespace-nowrap text-sm px-6 sm:px-0">
               <h1 className='px-2 bg-red-600 w-fit text-white rounded-full text-sm'> HIGH </h1>
             </td>
 

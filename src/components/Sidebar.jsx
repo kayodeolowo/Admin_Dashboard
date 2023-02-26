@@ -21,7 +21,7 @@ const Sidebar = () => {
   const [nav, setNav] = useState(false);
   const [logo, setLogo] = useState(false)
   
-  const activeLink = " text-[#DDE2FF] transition ease-in duration-300  bg-[#3f3f47]  py-2 border-l-4 ";
+  const activeLink = " text-[#DDE2FF]  transition ease-in duration-300  bg-[#3f3f47]  py-2 border-l-4 ";
   const normalLink = "";
 
 
@@ -76,7 +76,7 @@ const Sidebar = () => {
 
         
             {/* hamburger */} 
-            <div    className=' lg:hidden fixed h-14    w-screen px-4 sm:px-6 flex flex-row-reverse   justify-between  items-center z-10 '> 
+            <div    className=' lg:hidden  h-14    w-screen px-4 sm:px-6 flex flex-row-reverse   justify-between  items-center z-10 '> 
 
           <div> 
 
@@ -89,14 +89,14 @@ const Sidebar = () => {
             </div>
 
 
-             <div   onClick={handleNav} className={nav ? ' leading-loose text-start bg-[#363740]   text-2xl  absolute text-[#000000]  left-0 top-0    w-9/12  mx-auto z-10   duration-300 flex h-full       flex-col' : 'absolute left-[-100%] '}>
+             <div   onClick={handleNav} className={nav ? ' leading-loose text-start bg-[#363740]   text-2xl  absolute text-[#000000]  left-0 top-0   w-3/5  mx-auto z-10   duration-300 flex h-full       flex-col' : 'absolute left-[-100%] '}>
               <div > 
                   <div  id='bold'> 
                   <div className='  flex text-base pt-10  px-7  md:hidden space-x-4 mb-4 items-center'> 
                           <img src='./images/logo.png' alt='logo'/>
                           <h1 className='text-[#A4A6B3]'> Dashboard Kit </h1>
                         </div>
-                      <ul  className=' lg:hidden text-base mt-10 font-semibold  flex flex-col space-y-4  text-[#A4A6B3]   w-fit   '>         
+                      <ul  className=' lg:hidden text-base mt-10 font-semibold  flex flex-col space-y-4  text-[#A4A6B3]      '>         
                                  <NavLink to='/'  className={({ isActive }) => (isActive ? activeLink : normalLink)}    >  <p className=' hover:text-primarygreen mt-1 hover:cursor-pointer transition  hover:text-primaryblue duration-200 hover:text-semibold  px-10  flex items-center '> <AiFillPieChart className='mr-3'/> Overview </p>   </NavLink>
                             <NavLink to='/tickets'  className={({ isActive }) => (isActive ? activeLink : normalLink)}    >  <p className=' hover:text-primarygreen mt-1 hover:cursor-pointer transition  hover:text-primaryblue duration-200 hover:text-semibold px-10 flex items-center'> <HiOutlineTicket className='mr-3'/> Tickets </p>   </NavLink>
                               <NavLink to='/ideas'  className={({ isActive }) => (isActive ? activeLink : normalLink)}    >  <p className=' hover:text-primarygreen mt-1 hover:cursor-pointer transition  hover:text-primaryblue duration-200 hover:text-semibold px-10 flex items-center'> <FaLightbulb className='mr-3'/> Ideas </p>   </NavLink>

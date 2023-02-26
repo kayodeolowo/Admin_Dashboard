@@ -3,8 +3,8 @@ import {AiOutlineSearch} from 'react-icons/ai'
 
 const Home = () => {
   return (
-     <div className="w-full mt-14  lg:px-6 px-2   ">
-      <div className='grid grid-cols-2  w-full mt-6 lg:mt-10 items-center h-fit'> 
+     <div className="w-full mt-0 lg:mt-14  lg:px-6 px-2   ">
+      <div className='grid grid-cols-2  w-full mt-2 lg:mt-10 items-center h-fit'> 
         <div> 
           <h1 className='font-semibold text-2xl'> Overview </h1>
         </div>

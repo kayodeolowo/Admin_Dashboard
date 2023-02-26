@@ -1,10 +1,11 @@
 import React from 'react'
 import {BsThreeDotsVertical} from 'react-icons/bs'
+import ticketsData from '../data/ticketsData.json'
 
 const Tickets = () => {
   return (
-     <div className="w-full mt-14  lg:px-6 px-2   ">
-      <div className='grid grid-cols-2  w-full mt-6 lg:mt-10 items-center h-fit'> 
+     <div className="w-full mt-0 lg:mt-14  lg:px-6 px-2   ">
+      <div className='grid grid-cols-2  w-full mt-2 lg:mt-10 items-center h-fit'> 
         <div> 
           <h1 className='font-semibold text-2xl'> Tickets </h1>
         </div>
@@ -20,11 +21,11 @@ const Tickets = () => {
 
 
 <section class="py-1 bg-blueGray-50">
-<div class="w-full  mb-12 xl:mb-0  mx-auto mt-8 lg:mt-20">
+<div class="w-full  mb-10 xl:mb-0  mx-auto mt-8 lg:mt-20">
   <div class="relative flex flex-col min-w-0 break-words bg-white w-full mb-6 shadow-lg rounded ">
     <div class="rounded-t mb-0 px-4 py-3 border-0">
       <div class="flex  justify-between  items-center mb-10 mt-6">
-        <div class="relative w-full px-2 max-w-full  ">
+        <div class="relative w-full px-2 lg:px-6 max-w-full  ">
           <h3 class="font-semibold text-lg text-blueGray-700"> All tickets</h3>
         </div>
         <div class="relative w-full space-x-10 px-4 max-w-full flex flex-1 text-right">
@@ -38,7 +39,7 @@ const Tickets = () => {
       <table class="items-center bg-transparent w-full border-collapse ">
         <thead>
           <tr >
-            <th class=" bg-blueGray-50 text-[#C5C7CD] align-middle border border-solid border-blueGray-100 py-3 text-sm  border-l-0 border-r-0 border-t-0 whitespace-nowrap font-semibold text-left px-6 ">
+            <th class=" bg-blueGray-50 text-[#C5C7CD] align-middle border border-solid border-blueGray-100 py-2 text-sm  border-l-0 border-r-0 border-t-0 whitespace-nowrap font-semibold text-left px-6 lg:px-10 ">
                           Ticket details
                         </th>
           <th class=" bg-blueGray-50 text-[#C5C7CD] align-middle border border-solid border-blueGray-100 py-3 text-xs border-l-0 border-r-0 border-t-0 whitespace-nowrap font-semibold text-left  px-6 sm:px-0">
@@ -59,33 +60,34 @@ const Tickets = () => {
           </tr>
         </thead>
 
-        <tbody className=' h-[6rem] '>
+      { ticketsData.map(item=> (
+         <tbody key={item.id}  className=' h-[6rem] border-b-2'>
           <tr className='hover:bg-[#F7F8FC] hover:cursor-pointer' >
-            <th class="  whitespace-nowrap px-6 w-fit">
+            <th class="  whitespace-nowrap px-6 lg:px-10 w-fit">
               <div className='flex items-center  text-sm space-x-3  lg:space-x-5'>
-                  <img className='h-10' src='./images/man.png' alt=''/>
+                  <img className='h-10 w-10 rounded-full' src={item.image} alt=''/>
 
-                  <div className='flex text-sm flex-col items-center'> 
-                    <h1 className='text-sm'> Header for profile </h1>
-                    <p className='font-normal text-[#C5C7CD]'> Updated 1 day ago </p>
+                  <div className='flex text-xs lg:text-sm flex-col items-center '> 
+                    <h1 className='font-semibold'> {item.comments} </h1>
+                    <p className='  mr-auto font-normal text-[#C5C7CD]'> {item.updated} </p>
                   </div>
               </div>
             </th>
 
-            <td class="whitespace-nowrap  text-sm px-6 sm:px-0">
+            <td class="whitespace-nowrap lg:text-sm   text-xs px-6 sm:px-0">
               <div> 
-                <h1 className='font-semibold'> Tom Cruise</h1>
-                <p className='text-[#C5C7CD]'> on 24.05.2019 </p>
+                <h1 className='font-semibold '> {item.name} </h1>
+                <p className='text-[#C5C7CD]'> {item.date} </p>
               </div>
             </td>
-            <td class="whitespace-nowrap text-sm px-6 sm:px-0">
+            <td class="whitespace-nowrap text-xs lg:text-sm px-6 sm:px-0">
               <div> 
-                <h1 className='font-semibold text-sm flex-wrap'> May 26, 2019</h1>
-                <p className='text-[#C5C7CD]'> 6:30 PM </p>
+                <h1 className='font-semibold flex-wrap'> {item.regdate}</h1>
+                <p className='text-[#C5C7CD]'> {item.time} </p>
               </div>
             </td>
-            <td class="whitespace-nowrap text-sm px-6 sm:px-0">
-              <h1 className='px-2 bg-red-600 w-fit text-white rounded-full text-sm'> HIGH </h1>
+            <td class="whitespace-nowrap text-xs px-6 lg:text-sm sm:px-0">
+              <h1 className='px-2 py-0.5 bg-red-600 w-fit text-white rounded-full '> HIGH </h1>
             </td>
 
             <td class="whitespace-nowrap px-6 sm:px-0">
@@ -94,6 +96,9 @@ const Tickets = () => {
           </tr>
          
         </tbody>
+      )) }
+
+      
 
       </table>
     </div>

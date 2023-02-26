@@ -7,17 +7,19 @@ import Tickets from './Pages/Tickets';
 
 function App() {
   return (
-        <div className="flex ">
-      <Sidebar />
-      <div className="flex justify-center  w-full ">
-        
-          <Routes>
-            <Route path="/" element={<Home />} />
-            <Route path="/tickets" element={<Tickets/>} />
-          </Routes>
-       
-      </div>
-    </div>
+        <div className='lg:flex'>
+                 <Sidebar/>
+
+                <div className='w-full'> 
+                    <Routes>
+                        <Route path="/" element={<Home/>} /> 
+                        <Route path="/tickets" element={<Tickets/>} />
+ 
+                          
+                    </Routes>
+                </div>
+          
+          </div>
     
     );
 }

@@ -3,7 +3,7 @@ import {BsThreeDotsVertical} from 'react-icons/bs'
 
 const Tickets = () => {
   return (
-     <div className="w-full mt-14  lg:px-6 px-2  bg-[#F7F8FC] ">
+     <div className="w-full mt-14  lg:px-6 px-2   ">
       <div className='grid grid-cols-2  w-full mt-6 lg:mt-10 items-center h-fit'> 
         <div> 
           <h1 className='font-semibold text-2xl'> Tickets </h1>

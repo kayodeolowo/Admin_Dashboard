@@ -80,7 +80,7 @@ const Sidebar = () => {
 
           <div> 
 
-                {nav ? <AiOutlineClose onClick={handleNav}  className='  text-2xl sm:text-3xl items-center  ' /> :   <TbMenu2 onClick={handleNav} className=' text-2xl sm:text-3xl items-center  left-0  duration-50 ' />}
+                {nav ? <AiOutlineClose onClick={handleNav}  className='  text-2xl sm:text-3xl text-[#363740] items-center  ' /> :   <TbMenu2 onClick={handleNav} className='text-[#363740] text-2xl sm:text-3xl items-center  left-0  duration-50 ' />}
 
             </div>
 

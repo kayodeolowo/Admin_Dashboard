@@ -20,7 +20,7 @@
       "date": "on 24.05 2019",
       "time": "8:00 AM",
       "regdate": "May 26, 2019",
-      "priority": 8
+      "priority": 3
     },
 
     { 
@@ -32,7 +32,7 @@
       "date": "on 24.05 2019",
       "time": "8:00 AM",
       "regdate": "May 26, 2019",
-      "priority": 8
+      "priority": 9
     },
 
     { 
@@ -44,7 +44,7 @@
       "date": "on 24.05 2019",
       "time": "8:00 AM",
       "regdate": "May 26, 2019",
-      "priority": 8
+      "priority": 6
     }
 
 
@@ -74,7 +74,7 @@
       "date": "on 24.05 2019",
       "time": "8:00 AM",
       "regdate": "May 26, 2019",
-      "priority": 8
+      "priority": 6
     }
 
 
@@ -89,7 +89,7 @@
       "date": "on 24.05 2019",
       "time": "8:00 AM",
       "regdate": "May 26, 2019",
-      "priority": 8
+      "priority": 2
     }
 
 
@@ -104,24 +104,8 @@
       "date": "on 24.05 2019",
       "time": "8:00 AM",
       "regdate": "May 26, 2019",
-      "priority": 8
+      "priority": 6
     }
-
-
-    ,
-
-    { 
-      "id": 9,
-      "image": "./images/man.png",
-      "comments": "Adding Images to Featured Posts",  
-      "updated": "Updated 2 day ago",
-      "name": "Matt Damon",
-      "date": "on 24.05 2019",
-      "time": "8:00 AM",
-      "regdate": "May 26, 2019",
-      "priority": 8
-    }
-
     
 ]
 

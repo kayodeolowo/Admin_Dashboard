@@ -36,8 +36,8 @@ const Sidebar = () => {
  
   
     return (
-      <header className=' lg:w-[18rem] lg:bg-[#363740] lg:h-screen'> 
-         <div className="flex flex-col lg:h-screen   lg:mt-8        
+      <header className=' lg:w-[18rem]  lg:h-screen'> 
+         <div  className="flex flex-col lg:w-fit lg:bg-[#363740]  lg:h-full  lg:pt-8        
               lg:fixed   "> 
           
                     
@@ -96,7 +96,7 @@ const Sidebar = () => {
                           <img src='./images/logo.png' alt='logo'/>
                           <h1 className='text-[#A4A6B3]'> Dashboard Kit </h1>
                         </div>
-                      <ul  className=' lg:hidden text-base mt-10 font-semibold  flex flex-col space-y-4  text-[#A4A6B3]      '>         
+                      <ul  className=' lg:hidden text-lg mt-10 font-semibold  flex flex-col space-y-6  text-[#A4A6B3]      '>         
                                  <NavLink to='/'  className={({ isActive }) => (isActive ? activeLink : normalLink)}    >  <p className=' hover:text-primarygreen mt-1 hover:cursor-pointer transition  hover:text-primaryblue duration-200 hover:text-semibold  px-10  flex items-center '> <AiFillPieChart className='mr-3'/> Overview </p>   </NavLink>
                             <NavLink to='/tickets'  className={({ isActive }) => (isActive ? activeLink : normalLink)}    >  <p className=' hover:text-primarygreen mt-1 hover:cursor-pointer transition  hover:text-primaryblue duration-200 hover:text-semibold px-10 flex items-center'> <HiOutlineTicket className='mr-3'/> Tickets </p>   </NavLink>
                               <NavLink to='/ideas'  className={({ isActive }) => (isActive ? activeLink : normalLink)}    >  <p className=' hover:text-primarygreen mt-1 hover:cursor-pointer transition  hover:text-primaryblue duration-200 hover:text-semibold px-10 flex items-center'> <FaLightbulb className='mr-3'/> Ideas </p>   </NavLink>

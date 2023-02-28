@@ -1,6 +1,9 @@
 import React from 'react'
-import {BsThreeDotsVertical} from 'react-icons/bs'
+import {BsThreeDotsVertical,BsSortUp} from 'react-icons/bs'
+import {MdFilterAlt} from 'react-icons/md'
 import ticketsData from '../data/ticketsData.json'
+
+
 
 const Tickets = () => {
   return (
@@ -29,8 +32,20 @@ const Tickets = () => {
           <h3 class="font-semibold text-lg text-blueGray-700"> All tickets</h3>
         </div>
         <div class="relative w-full space-x-10 px-4 max-w-full flex flex-1 text-right">
-          <h1> Sort </h1>
-          <h1> Filter </h1>
+          <div className='flex space-x-2 items-center '> 
+               <BsSortUp className='text-[#C5C7CD]'/>
+                <h1>   Sort </h1>
+            </div>
+
+            <div className='flex space-x-2 items-center '> 
+               <MdFilterAlt className='text-[#C5C7CD]'/>
+                <h1> Filter </h1>
+            </div>
+
+
+             
+         
+          
         </div>
       </div>
     </div>
@@ -42,14 +57,14 @@ const Tickets = () => {
             <th class=" bg-blueGray-50 text-[#C5C7CD] align-middle border border-solid border-blueGray-100 py-2 text-sm  border-l-0 border-r-0 border-t-0 whitespace-nowrap font-semibold text-left px-6 lg:px-10 ">
                           Ticket details
                         </th>
-          <th class=" bg-blueGray-50 text-[#C5C7CD] align-middle border border-solid border-blueGray-100 py-3 text-xs border-l-0 border-r-0 border-t-0 whitespace-nowrap font-semibold text-left  px-6 sm:px-0">
+          <th class=" bg-blueGray-50 text-[#C5C7CD] align-middle border border-solid border-blueGray-100 py-3 text-sm border-l-0 border-r-0 border-t-0 whitespace-nowrap font-semibold text-left  px-6 sm:px-0">
                           Customer name
                         </th>
-           <th class=" bg-blueGray-50 text-[#C5C7CD] align-middle border border-solid border-blueGray-100 py-3 text-xs border-l-0 border-r-0 border-t-0 whitespace-nowrap font-semibold text-left px-6 sm:px-0">
+           <th class=" bg-blueGray-50 text-[#C5C7CD] align-middle border border-solid border-blueGray-100 py-3 text-sm border-l-0 border-r-0 border-t-0 whitespace-nowrap font-semibold text-left px-6 sm:px-0">
                           Date
                         </th>
-          <th class=" bg-blueGray-50 text-[#C5C7CD] align-middle border border-solid border-blueGray-100 py-3 text-xs border-l-0 border-r-0 border-t-0 whitespace-nowrap font-semibold text-left px-6 sm:px-0">
-                          Piority
+          <th class=" bg-blueGray-50 text-[#C5C7CD] align-middle border border-solid border-blueGray-100 py-3 text-sm border-l-0 border-r-0 border-t-0 whitespace-nowrap font-semibold text-left px-6 sm:px-0">
+                          Priority
                         </th>
 
                         <th class=" bg-blueGray-50 text-blueGray-500 align-middle border border-solid border-blueGray-100 border-t-0 py-3 text-xs border-l-0 border-r-0 whitespace-nowrap font-semibold text-left">
@@ -87,7 +102,17 @@ const Tickets = () => {
               </div>
             </td>
             <td class="whitespace-nowrap text-xs px-6 lg:text-sm sm:px-0">
-              <h1 className='px-2 py-0.5 bg-red-600 w-fit text-white rounded-full '> HIGH </h1>
+              {item.priority !== null && (
+        <div className=" lg:text-sm text-xs uppercase ">
+          {item.priority < 5 ? (
+            <p className="bg-yellow-500 text-white w-fit px-2  rounded-xl">Low</p>
+          ) : item.priority >= 5 && item.priority <= 7 ? (
+            <p className="bg-green-500 text-white w-fit px-2 rounded-xl">Normal</p>
+          ) : (
+            <p className="bg-red-600 text-white w-fit px-2 rounded-xl">High</p>
+          )}
+        </div>
+      )}
             </td>
 
             <td class="whitespace-nowrap px-6 sm:px-0">

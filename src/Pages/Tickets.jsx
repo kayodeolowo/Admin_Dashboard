@@ -32,12 +32,12 @@ const Tickets = () => {
           <h3 class="font-semibold text-lg text-blueGray-700"> All tickets</h3>
         </div>
         <div class="relative w-full space-x-10 px-4 max-w-full flex flex-1 text-right">
-          <div className='flex space-x-2 items-center '> 
+          <div className='hover:cursor-pointer flex space-x-2 items-center '> 
                <BsSortUp className='text-[#C5C7CD]'/>
                 <h1>   Sort </h1>
             </div>
 
-            <div className='flex space-x-2 items-center '> 
+            <div className='flex hover:cursor-pointer space-x-2 items-center '> 
                <MdFilterAlt className='text-[#C5C7CD]'/>
                 <h1> Filter </h1>
             </div>
